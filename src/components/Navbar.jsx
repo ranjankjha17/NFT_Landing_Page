@@ -4,6 +4,8 @@ import { MdClose } from "react-icons/md";
 import { ImSun } from "react-icons/im";
 import { BsFillMoonFill } from "react-icons/bs";
 import logo from "../assets/logo.png";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 export default function Navbar({ changeTheme, currentTheme }) {
   const [navState, setNavState] = useState(false);
   return (
@@ -29,6 +31,11 @@ export default function Navbar({ changeTheme, currentTheme }) {
           </div>
         </div>
       </div>
+            <ConnectButton showBalance={false} chainStatus="none"  accountStatus={{
+    smallScreen: 'avatar',
+    largeScreen: 'full',
+  }}/>
+
       <div className={`links-container ${navState ? "nav-visible" : ""}`}>
         <ul className="links">
           <li>
